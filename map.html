@@ -19,6 +19,7 @@
       html,
       body {
         height: 95%;
+        background-color: #555;
       }
       #map {
         height: 90%;
@@ -26,15 +27,24 @@
         margin-top: 0px;
         margin-bottom: 0px;
       }
+      nav {
+        background-color: #dadada;
+        padding-left: 5%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        font-weight: 700;
+        margin: 0px;
+        color: #555;
+      }
     </style>
   </head>
 
   <body>
     <nav>
-      latitude: <span id="lat"></span><br />
-      longitude: <span id="lng"></span><br />
-      country: <span id="ctr"></span><br />
-      distance to target: <span id="distance"></span>
+      Latitude: <span id="lat"></span><br />
+      Longitude: <span id="lng"></span><br />
+      Country: <span id="ctr"></span><br />
+      Genetic distance to target: <span id="distance"></span><br />
     </nav>
     <map>
       <div id="map"></div>
