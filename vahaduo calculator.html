@@ -582,8 +582,12 @@ https://github.com/vahaduo/
           return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
         }
 
-        f = {};
+        AaC = {};
+        AaC[document.getElementById("distances").rows[0].cells[1].innerHTML] =
+          "target";
         for (i = 1; i < document.getElementById("distances").rows.length; i++) {
+          //source
+
           //name
           name =
             document.getElementById("distances").rows[i].cells[1].innerHTML;
@@ -595,12 +599,15 @@ https://github.com/vahaduo/
             .split("(")[1]
             .split(",")[0];
           //
-          f[name] = hslToHex(Number(color));
-          console.log(name, color, f[name]);
+          AaC[name] = [
+            hslToHex(Number(color)),
+            document.getElementById("distances").rows[i].cells[0].innerHTML,
+          ]; // COLOR , DISTANCE
+          console.log(name, color, AaC[name]);
         }
-        //CaC countries and colors
-        localStorage.setItem("myObject", JSON.stringify(f));
-        window.open("index.html", "_blank");
+        //AaC Adjectivals (countries) and colors
+        localStorage.setItem("myObject", JSON.stringify(AaC));
+        window.open("map.html", "_blank");
       }
 
       function toggleOptions(option, elmnt) {
@@ -1104,9 +1111,7 @@ https://github.com/vahaduo/
             distances[i][0] +
             "</td></tr>";
         }
-        output += "GENETICPAC";
-        // output += target[0];
-
+        output += "</table>";
         printOutput(output, "distanceoutput");
       }
 

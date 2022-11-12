@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="src\LeafletJS\leaflet.css" />
+    <script src="src\LeafletJS\leaflet.js"></script>
+    <!-- Mapping library-->
+    <script src="src\countries.js"></script>
+    <!-- Countries Polygons Downloaded from https://datahub.io/core/geo-countries instead of having to deal with any geography API-->
+    <script src="src\d3.js"></script>
+    <!-- d3 to check if the polygon contains a specefic coordination -->
+    <script src="src\Countries And Adjectivals.js"></script>
+    <!-- Countries and their respective Adjectivals, created a tool to scrap it from wikipedia-->
+
+    <title>Genetic Map</title>
+    <style>
+      html,
+      body {
+        height: 95%;
+      }
+      #map {
+        height: 90%;
+        width: 80%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      latitude: <span id="lat"></span><br />
+      longitude: <span id="lng"></span><br />
+      country: <span id="ctr"></span><br />
+      distance to target: <span id="distance"></span>
+    </nav>
+    <map>
+      <div id="map"></div>
+    </map>
+    <script src="map.js"></script>
+  </body>
+</html>
