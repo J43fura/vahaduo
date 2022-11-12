@@ -7,7 +7,7 @@
 ## Libraries:
 [leaflet.js](https://leafletjs.com/) for Mapping.
 <br>
-[d3.js](https://d3js.org/) to check if the polygon contains a specefic coordination.
+[d3.js](https://d3js.org/) to check if the polygon contains a specific coordination.
 <br>
 ## Data: 
 [countries.js](https://datahub.io/core/geo-countries) : Countries Polygons dataset instead of having to deal with any geography API. 
